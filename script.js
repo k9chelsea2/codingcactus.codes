@@ -1,5 +1,5 @@
 const body = document.querySelectorAll("body")[0];
-const blocks = document.querySelectorAll("div");
+const blocks = document.querySelectorAll("main div");
 
 body.onscroll = function(){
 		blocks.forEach( block => {
