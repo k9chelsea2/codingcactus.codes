@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 
-
 :root {
 	--color-background-1: #0e172f;
 	--color-background-2: #2aae41;
 	--color-background-3: #e3e3e3;
 	--color-foreground-1: #eaeaea;
 	--color-foreground-2: #030303;
-	--color-link: #076d92;
+	--color-link: #217730;
+    --color-link-2: #c7c76e;
 	--border-radius-small: 12px;
 	--border-radius-medium: 25px;
 	--border-radius-large: 75px;
@@ -36,8 +36,24 @@ body, html {
 
 h1 {
 	text-align: center;
-	font-size: 50px;
+	font-size: calc(30px + 3vw);
+    font-weight: bold;
+    text-shadow:0 1px 0 hsl(174,5%,80%),
+                0 2px 0 hsl(174,5%,75%),
+                0 3px 0 hsl(174,5%,70%),
+                0 4px 0 hsl(174,5%,66%),
+                0 5px 0 hsl(174,5%,64%),
+                0 6px 0 hsl(174,5%,62%),
+                0 7px 0 hsl(174,5%,61%),
+                0 8px 0 hsl(174,5%,60%),
+                0 0 5px rgba(0,0,0,.05),
+                0 1px 3px rgba(0,0,0,.2),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.2),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.3);
 }
+
 
 h3 {
 	margin: var(--spacing-half) 0;
@@ -47,6 +63,10 @@ h3 {
 h4 {
 	font-size: 22px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header p {
+    padding: 10px 0;
 }
 
 ul {
@@ -63,19 +83,30 @@ a:hover {
 	text-decoration: underline;
 }
 
+header a, footer a{
+	color: var(--color-link-2);
+}
+
 .links {
 	line-break: anywhere;
 }
 
 header {
-	padding: 0 50px;
-	padding-bottom: calc(var(--border-radius-medium) / 2); 
+	padding: 30px 50px;
+	padding-bottom: 60px; 
 	background-color: var(--color-background-2);
 	border-bottom-left-radius: var(--border-radius-medium);
 	border-bottom-right-radius: var(--border-radius-medium);
 	margin-bottom: var(--spacing-3);
+    background: linear-gradient(to right, #0A6636, #2AD948);
 }
 
+.cc{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 main div:nth-child(odd) {
 	background-color: var(--color-background-3);
@@ -88,9 +119,9 @@ main div:nth-child(odd) {
 	padding: calc(var(--border-radius-large) / 2);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-3);
-	opacity: 0;
+	opacity: 0.3;
 	margin-left: -66%;
-	transition: margin-left 1s ease, opacity 3s ease;
+	transition: margin-left 1s ease, opacity 2s ease;
 }
 
 main div:nth-child(even) {
@@ -103,13 +134,12 @@ main div:nth-child(even) {
 	border-top-left-radius: var(--border-radius-large);
 	border-bottom-left-radius: var(--border-radius-large);
 	padding: calc(var(--border-radius-large) / 2);
-	opacity: 0;
+	opacity: 0.3;
 	margin-left: 134%;
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-3);
-	transition: margin-left 1s ease, opacity 3s ease;
+	transition: margin-left 1s ease, opacity 2s ease;
 }
-
 
 main div:nth-child(odd).show {
 	opacity: 1;
@@ -127,13 +157,28 @@ footer {
 	border-top-left-radius: var(--border-radius-medium);
 	border-top-right-radius: var(--border-radius-medium);
 	margin-top: var(--spacing-3);
+    background: linear-gradient(to right, #0A6636, #2AD948);
 }
 
 img {
-	max-width: 90%;
+    height: 300px;
+	max-width: 100%;
 	display: block;
-	margin:  auto;
+	margin: 20px;
 	border-radius: var(--border-radius-small);
 	padding: var(--border-radius-small);
 	background-color: white;
+    transition: .2s;
+    box-shadow: 0 1px 0 hsl(174,5%,80%),
+                0 2px 0 hsl(174,5%,75%),
+                0 3px 0 hsl(174,5%,70%),
+                0 4px 0 hsl(174,5%,66%),
+                0 5px 0 hsl(174,5%,64%),
+                0 6px 0 hsl(174,5%,62%),
+                0 7px 0 hsl(174,5%,61%),
+                0 8px 0 hsl(174,5%,60%),
+                0 0 5px rgba(0,0,0,.05),
+                0 5px 10px rgba(0,0,0,.2),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.3);
 }
