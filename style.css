@@ -26,7 +26,7 @@
 }
 
 body, html {
-	background: var(--color-background-1) url("../media/cactus-background.png") repeat 0 0;
+	background: var(--color-background-1) url("cactus-background.png") repeat 0 0;
 	color: var(--color-foreground-1);
 	font-family: 'Baloo 2', sans-serif;
 	font-size: 20px;
@@ -190,20 +190,21 @@ img {
 	header p {padding: 0;}
 	header {padding: 5px;}
 	footer {padding: 20px}
+	main > div {padding: var(--spacing-1);}
 }
 
 body::-webkit-scrollbar {
-	width: 4px;
+	width: 5px;
 	background: inherit;
 }
 
 body::-webkit-scrollbar-track {
-	width: 4px;
+	width: 5px;
 	background: #FFFFFF;
 }
 
 body::-webkit-scrollbar-thumb {
-	width: 4px;
+	width: 5px;
 	background: rgb(37, 126, 126);
 }
 
